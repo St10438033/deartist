@@ -1,0 +1,618 @@
+/* ========== style.css ========== */
+/* DeArtist - Vintage TV Aesthetics & Marketplace Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0806; /* deep vintage black-brown */
+  font-family: 'Inter', sans-serif;
+  color: #ede7dd;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ---------- OLD TV FRAME EFFECT (vintage tube) ---------- */
+.tv-frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+  border: 28px solid #2c241e;
+  border-radius: 60px 60px 50px 50px;
+  box-shadow: inset 0 0 80px rgba(0,0,0,0.8), 0 0 0 4px #5a4a3a, 0 0 0 8px #2a1f18;
+  background: transparent;
+}
+
+/* scanlines */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.08) 0px,
+    rgba(0, 0, 0, 0.08) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  pointer-events: none;
+  z-index: 1001;
+  opacity: 0.5;
+}
+
+/* adjust content to fit inside TV frame */
+.app-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* vintage gradients */
+body {
+  background: radial-gradient(circle at 20% 30%, #1f1913, #090603);
+}
+
+/* header styles */
+.hero-header {
+  padding: 28px 0 20px;
+  border-bottom: 1px solid rgba(205, 170, 120, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.brand-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #f7e3af, #cb9e6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 6px rgba(203, 158, 107, 0.4);
+}
+
+.vinyl-dot {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #e0b073;
+  filter: drop-shadow(0 0 2px #ffb347);
+}
+
+.tagline {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #c6aa7c;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #e5d5b0;
+  font-weight: 500;
+  transition: 0.2s;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-link.active {
+  color: #f3cf7a;
+  border-bottom: 2px solid #e7b45a;
+  padding-bottom: 4px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 18px;
+}
+
+.icon-btn {
+  background: rgba(30, 24, 20, 0.7);
+  border: 1px solid #b7894b;
+  border-radius: 60px;
+  font-size: 1.3rem;
+  padding: 8px 14px;
+  color: #e7cf9e;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.icon-btn:hover {
+  background: #b87c3c;
+  color: #1e1710;
+  border-color: #e7b45a;
+  transform: scale(0.97);
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #d68b2c;
+  color: #1f1a12;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  border: 1px solid #f5d48a;
+}
+
+/* HERO SECTION vintage CRT glow */
+.hero-vintage {
+  padding: 60px 0 40px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-badge {
+  background: #2f241b;
+  padding: 6px 14px;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #eec77e;
+  display: inline-block;
+  margin-bottom: 20px;
+  border-left: 3px solid #e2a347;
+}
+
+.hero-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.glow-text {
+  text-shadow: 0 0 6px #f1bc5d, 0 0 12px rgba(223, 150, 50, 0.6);
+  color: #ffda99;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  color: #cfc1a8;
+  margin-bottom: 32px;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 28px;
+  border-radius: 60px;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: linear-gradient(145deg, #e4b062, #c5812c);
+  color: #1f1912;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 0 12px #f3bc64;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1.5px solid #d4a15a;
+  color: #f0dbb4;
+}
+
+.btn-secondary:hover {
+  background: rgba(200, 140, 70, 0.2);
+  border-color: #f5cf8b;
+}
+
+.hero-graphic {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.vinyl-record {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, #2e2a24, #0a0704);
+  border-radius: 50%;
+  box-shadow: 0 20px 35px rgba(0,0,0,0.6), inset 0 0 0 6px #ab8b58, inset 0 0 0 12px #3c2c1c;
+  position: relative;
+}
+
+.vinyl-record::after {
+  content: "⚫";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 42px;
+  color: #c29654;
+  text-shadow: 0 0 5px;
+}
+
+.crt-glow-effect {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(220,150,60,0.2) 0%, rgba(0,0,0,0) 80%);
+  filter: blur(12px);
+  z-index: -1;
+}
+
+/* Category & Filters */
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin: 50px 0 28px;
+  border-bottom: 1px solid #4f3e2e;
+  padding-bottom: 15px;
+}
+
+#sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #cbb076;
+}
+
+.genre-pills {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.genre-pill {
+  background: #2b221c;
+  border: 1px solid #836e4f;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #e2cfaa;
+}
+
+.genre-pill.active, .genre-pill:hover {
+  background: #b87a38;
+  border-color: #f2cb8b;
+  color: #201a12;
+  font-weight: 500;
+}
+
+/* product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 32px;
+  margin: 30px 0 60px;
+}
+
+.product-card {
+  background: linear-gradient(145deg, #231f1a, #17130f);
+  border-radius: 32px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  border: 1px solid #65553e;
+  box-shadow: 0 8px 14px rgba(0,0,0,0.5);
+  backdrop-filter: blur(2px);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: #e2b064;
+  box-shadow: 0 16px 28px rgba(0,0,0,0.6);
+}
+
+.card-media {
+  height: 190px;
+  background: #201b15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border-bottom: 2px solid #5a4834;
+}
+
+.card-info {
+  padding: 20px;
+}
+
+.product-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  font-family: 'Playfair Display', serif;
+}
+
+.artist-name {
+  font-size: 0.8rem;
+  color: #d7b16b;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.35rem;
+  color: #f8d99c;
+  margin: 12px 0;
+}
+
+.add-to-cart {
+  background: #382c21;
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 60px;
+  font-weight: 600;
+  color: #f3e2bf;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.add-to-cart:hover {
+  background: #cf9a4a;
+  color: #211b12;
+}
+
+/* artists spotlight */
+.artists-spotlight {
+  margin: 70px 0 40px;
+  padding-top: 20px;
+  border-top: 1px dashed #7c684b;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.section-header h3 {
+  font-size: 1.7rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.see-all-link {
+  color: #d6a468;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.artist-row {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.artist-card {
+  background: #1f1913b3;
+  border-radius: 60px;
+  padding: 12px 20px;
+  width: auto;
+  min-width: 160px;
+  backdrop-filter: blur(4px);
+  border: 1px solid #9e7d55;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.artist-avatar {
+  font-size: 2.4rem;
+}
+
+/* CART SIDEBAR */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 380px;
+  height: 100vh;
+  background: #1f1912e6;
+  backdrop-filter: blur(16px);
+  z-index: 2000;
+  border-left: 3px solid #c5974b;
+  box-shadow: -5px 0 30px rgba(0,0,0,0.7);
+  transition: right 0.3s ease;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  color: #efe2ca;
+}
+
+.cart-sidebar.open {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ba8f48;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #ebc183;
+  cursor: pointer;
+}
+
+.cart-items-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  border-bottom: 1px dashed #5c4b34;
+  padding-bottom: 12px;
+}
+
+.cart-footer {
+  margin-top: 20px;
+  border-top: 2px solid #a47a48;
+  padding-top: 20px;
+}
+
+.cart-total {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.btn-checkout {
+  width: 100%;
+  background: #d49c46;
+  padding: 12px;
+  border: none;
+  font-weight: bold;
+  border-radius: 60px;
+  color: #1e1710;
+  cursor: pointer;
+}
+
+.empty-cart-msg {
+  text-align: center;
+  opacity: 0.7;
+  padding: 30px 0;
+}
+
+/* footer */
+.vintage-footer {
+  margin-top: 80px;
+  background: #0f0c09;
+  padding: 48px 0 20px;
+  border-top: 2px solid #5f4d34;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col h4, .footer-col h5 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 12px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 8px;
+  opacity: 0.8;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.social-icons i {
+  font-size: 1.4rem;
+  margin-right: 16px;
+  opacity: 0.7;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.7rem;
+  border-top: 1px solid #3c2d1f;
+  padding-top: 24px;
+}
+
+/* responsive */
+@media (max-width: 760px) {
+  .tv-frame { border-width: 12px; }
+  .hero-text h2 { font-size: 2.4rem; }
+  .header-container { flex-direction: column; }
+  .cart-sidebar { width: 100%; right: -100%; }
+}

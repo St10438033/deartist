@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>DeArtist · Vintage Music Marketplace</title>
+  <!-- Google Fonts: vintage-modern hybrid -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="stylesheet">
+</head>
+<body>
+  <!-- OLD TV FRAME OVERLAY (vignette + scanlines) -->
+  <div class="tv-frame"></div>
+  
+  <!-- MAIN WEBSITE CONTENT -->
+  <div class="site-wrapper">
+    <!-- HEADER / NAVIGATION -->
+    <header class="hero-header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <i class="fas fa-record-vinyl"></i> 
+            <span>DeArtist</span>
+            <span class="est">est. 2025</span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#discover">Discover</a></li>
+            <li><a href="#artists">Artists</a></li>
+            <li><a href="#merch">Merch</a></li>
+            <li><a href="#tickets">Tickets</a></li>
+            <li><a href="#" class="btn-outline-sm"><i class="fas fa-user"></i> Sign in</a></li>
+          </ul>
+          <div class="mobile-menu-icon" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-tv"></i> The analog revolution
+          </div>
+          <h1 class="hero-title">Where sound finds <span class="gradient-text">soul</span>.</h1>
+          <p class="hero-subtitle">Sell music, vinyl, merch & tickets — vintage vibes, modern conversion. Join DeArtist marketplace.</p>
+          <div class="hero-cta">
+            <a href="#" class="btn-primary">Start selling <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="btn-secondary">Explore artists</a>
+          </div>
+          <div class="hero-stats">
+            <span><i class="fas fa-headphones"></i> 2,500+ artists</span>
+            <span><i class="fas fa-ticket-alt"></i> 1,200+ events</span>
+            <span><i class="fas fa-shopping-cart"></i> 98% fan happiness</span>
+          </div>
+        </div>
+      </div>
+      <!-- vintage gradient overlay inside header -->
+      <div class="header-gradient-overlay"></div>
+    </header>
+
+    <!-- FEATURED MUSIC SECTION (DIGITAL / PHYSICAL) -->
+    <section class="section" id="discover">
+      <div class="container">
+        <div class="section-header">
+          <div class="vintage-stamp">fresh wax</div>
+          <h2>Featured releases <i class="fas fa-music"></i></h2>
+          <p>Direct from artists — limited edition vinyl, digital drops, and exclusive tracks.</p>
+        </div>
+        <div class="product-grid" id="musicGrid">
+          <!-- MUSIC CARDS will be injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- MERCH SECTION (CLOTHING/ACCESSORIES) -->
+    <section class="section alt-bg" id="merch">
+      <div class="container">
+        <div class="section-header">
+          <div class="vintage-stamp">merch booth</div>
+          <h2>Official artist merch <i class="fas fa-tshirt"></i></h2>
+          <p>Wear your favorite sound. Hoodies, tees, totes & limited drops.</p>
+        </div>
+        <div class="product-grid" id="merchGrid"></div>
+      </div>
+    </section>
+
+    <!-- TICKETS & EVENTS SECTION -->
+    <section class="section" id="tickets">
+      <div class="container">
+        <div class="section-header">
+          <div class="vintage-stamp">on tour</div>
+          <h2>Live experiences <i class="fas fa-ticket-alt"></i></h2>
+          <p>Secure your spot — intimate shows, festivals, and album release parties.</p>
+        </div>
+        <div class="events-list" id="eventsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ARTIST SPOTLIGHT / COMMUNITY SECTION -->
+    <section class="section alt-bg" id="artists">
+      <div class="container">
+        <div class="section-header">
+          <div class="vintage-stamp">the collective</div>
+          <h2>Featured artists <i class="fas fa-microphone-alt"></i></h2>
+          <p>Independent voices shaping the future of sound.</p>
+        </div>
+        <div class="artist-grid" id="artistGrid"></div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION: BECOME A SELLER -->
+    <div class="cta-block">
+      <div class="container cta-inner">
+        <div class="cta-text">
+          <h3>Turn passion into income</h3>
+          <p>Join DeArtist marketplace — zero upfront fees, vintage soul, modern tools.</p>
+        </div>
+        <a href="#" class="btn-primary large">Become a DeArtist seller <i class="fas fa-chalkboard-user"></i></a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-col">
+          <div class="footer-logo"><i class="fas fa-record-vinyl"></i> DeArtist</div>
+          <p>Vintage marketplace for independent artists. Music, merch, moments.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-soundcloud"></i></a>
+            <a href="#"><i class="fab fa-bandcamp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Marketplace</h4>
+          <a href="#">Sell music</a>
+          <a href="#">Sell merch</a>
+          <a href="#">Event tickets</a>
+          <a href="#">Artist tools</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About DeArtist</a>
+          <a href="#">Vintage ethos</a>
+          <a href="#">Press & media</a>
+          <a href="#">Careers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="#">Help center</a>
+          <a href="#">Community guidelines</a>
+          <a href="#">Privacy & terms</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 DeArtist — where analog dreams meet digital reality. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
